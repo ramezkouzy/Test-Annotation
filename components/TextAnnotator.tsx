@@ -573,6 +573,8 @@ const TextAnnotator = () => {
         >
           {contextMenu.annotations.map(ann => {
             const label = labels.find(l => l.id === ann.labelId);
+            if (!label) return null; // Skip if label not found
+            
             return (
               <button
                 key={ann.id}
@@ -604,7 +606,7 @@ const TextAnnotator = () => {
           )}
         </div>
       )}
-
+      
       {/* Click away listeners */}
       {contextMenu.visible && (
         <div
