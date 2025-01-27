@@ -633,7 +633,7 @@ const TextAnnotator = () => {
                     onMouseUp={handleTextSelect}
                     style={{
                       scrollBehavior: 'smooth',
-                      overflowY: 'overlay'
+                      overflowY: 'auto'
                     }}
                   >
                     <div className="prose max-w-none text-sm leading-relaxed">
